@@ -2,10 +2,20 @@ package com.example.nguyen.baitapfragmentandroid;
 
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 
 /**
@@ -13,7 +23,7 @@ import android.view.ViewGroup;
  */
 public class MenuFragment extends Fragment {
 
-
+    private ListView lvMenu;
     public MenuFragment() {
         // Required empty public constructor
     }
@@ -26,7 +36,30 @@ public class MenuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu, container, false);
-    }
+        View v = inflater.inflate(R.layout.fragment_menu, container, false);
+        lvMenu = v.findViewById(R.id.lvMenu);
+        ArrayList<String> menu = new ArrayList<>();
+        menu.add("Tinh toan so hoc");
+        menu.add("Tinh chu vi - dien tich");
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, menu);
+        lvMenu.setAdapter(arrayAdapter);
+        lvMenu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(position == 0){
+//                    FragmentManager childManager = getChildFragmentManager();
+//                    FragmentTransaction childTransaction = childManager.beginTransaction();
+//                    childTransaction.add()
+                    ((MainActivity) getActivity()).callFragment(R.id.flDetail, CalculatorFragment.getInstance());
+                    Toast.makeText(getContext(), "fffff", Toast.LENGTH_SHORT).show();
+                }else if(position == 1){
 
+//                    ((MainActivity) getActivity()).removeFragment();
+                    ((MainActivity) getActivity()).callFragment(R.id.flDetail, AreaPerimeterFragment.getInstance());
+                    Toast.makeText(getContext(), "aaaa", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        return v;
+    }
 }

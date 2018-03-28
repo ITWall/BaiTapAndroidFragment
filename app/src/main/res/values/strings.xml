@@ -3,4 +3,13 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_number">Số thứ nhất:</string>
+    <string name="second_number">Số thứ hai:</string>
+    <string name="result_number">Kết quả</string>
+    <string name="mnAdd">Cộng</string>
+    <string name="mnSub">Trừ</string>
+    <string name="mnMul">Nhân</string>
+    <string name="mnDivide">Chia</string>
+    <string name="area">Diện tích</string>
+    <string name="perimeter">Chu vi</string>
 </resources>

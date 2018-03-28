@@ -1,0 +1,27 @@
+<android.support.v4.app.FragmentTabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nguyen.baitapfragmentandroid.AreaPerimeterFragment"
+    android:id="@+id/tabHost">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabWidget
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"/>
+
+        <FrameLayout
+            android:id="@+id/flContentAPFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"/>
+    </LinearLayout>
+
+</android.support.v4.app.FragmentTabHost>

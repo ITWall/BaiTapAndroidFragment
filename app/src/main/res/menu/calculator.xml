@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/mnAdd"
+        android:title="@string/mnAdd"/>
+
+    <item android:id="@+id/mnSub"
+        android:title="@string/mnSub"/>
+
+    <item android:id="@+id/mnMul"
+        android:title="@string/mnMul"/>
+
+    <item android:id="@+id/mnDivide"
+        android:title="@string/mnDivide"/>
+</menu>
