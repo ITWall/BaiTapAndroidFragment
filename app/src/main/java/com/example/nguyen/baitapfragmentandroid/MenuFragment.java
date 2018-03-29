@@ -2,12 +2,8 @@ package com.example.nguyen.baitapfragmentandroid;
 
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -47,16 +43,9 @@ public class MenuFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if(position == 0){
-//                    FragmentManager childManager = getChildFragmentManager();
-//                    FragmentTransaction childTransaction = childManager.beginTransaction();
-//                    childTransaction.add()
                     ((MainActivity) getActivity()).callFragment(R.id.flDetail, CalculatorFragment.getInstance());
-                    Toast.makeText(getContext(), "fffff", Toast.LENGTH_SHORT).show();
                 }else if(position == 1){
-
-//                    ((MainActivity) getActivity()).removeFragment();
-                    ((MainActivity) getActivity()).callFragment(R.id.flDetail, AreaPerimeterFragment.getInstance());
-                    Toast.makeText(getContext(), "aaaa", Toast.LENGTH_SHORT).show();
+                    ((MainActivity) getActivity()).callFragment(R.id.flDetail, ShapeFragment.getInstance());
                 }
             }
         });

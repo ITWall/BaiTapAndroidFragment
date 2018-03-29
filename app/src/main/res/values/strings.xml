@@ -10,6 +10,11 @@
     <string name="mnSub">Trừ</string>
     <string name="mnMul">Nhân</string>
     <string name="mnDivide">Chia</string>
+    <string name="rectangle">Hình chữ nhật</string>
+    <string name="square">Hình vuông</string>
+    <string name="first_side">Cạnh thứ nhất:</string>
+    <string name="second_side">Cạnh thứ hai:</string>
     <string name="area">Diện tích</string>
     <string name="perimeter">Chu vi</string>
+    <string name="side">Chiều dài cạnh:</string>
 </resources>

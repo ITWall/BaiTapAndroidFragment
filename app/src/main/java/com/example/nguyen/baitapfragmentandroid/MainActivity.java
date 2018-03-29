@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity{
         menuFragment = MenuFragment.getInstance();
         calculatorFragment = CalculatorFragment.getInstance();
         callFragment(R.id.flMenu, menuFragment);
-//        callFragment(R.id.flDetail, calculatorFragment);
+        callFragment(R.id.flDetail, calculatorFragment);
     }
 
     public static MainActivity getInstance(){
@@ -44,20 +44,24 @@ public class MainActivity extends AppCompatActivity{
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.mnAdd:
-                Toast.makeText(this, "add", Toast.LENGTH_SHORT).show();
-                calculatorFragment.displayResult(calculatorFragment.add());
+//                Toast.makeText(this, "add", Toast.LENGTH_SHORT).show();
+//                calculatorFragment.displayResult(calculatorFragment.add());
+                calculatorFragment.displayResult(0);
                 break;
             case R.id.mnSub:
-                Toast.makeText(this, "sub", Toast.LENGTH_SHORT).show();
-                calculatorFragment.displayResult(calculatorFragment.sub());
+//                Toast.makeText(this, "sub", Toast.LENGTH_SHORT).show();
+//                calculatorFragment.displayResult(calculatorFragment.sub());
+                calculatorFragment.displayResult(1);
                 break;
             case R.id.mnMul:
-                Toast.makeText(this, "mul", Toast.LENGTH_SHORT).show();
-                calculatorFragment.displayResult(calculatorFragment.mul());
+//                Toast.makeText(this, "mul", Toast.LENGTH_SHORT).show();
+//                calculatorFragment.displayResult(calculatorFragment.mul());
+                calculatorFragment.displayResult(2);
                 break;
             case R.id.mnDivide:
-                Toast.makeText(this, "div", Toast.LENGTH_SHORT).show();
-                calculatorFragment.displayResult(calculatorFragment.div());
+//                Toast.makeText(this, "div", Toast.LENGTH_SHORT).show();
+//                calculatorFragment.displayResult(calculatorFragment.div());
+                calculatorFragment.displayResult(3);
                 break;
         }
         return super.onOptionsItemSelected(item);
